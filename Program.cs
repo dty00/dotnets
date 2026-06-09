@@ -2,7 +2,7 @@
 // Console.WriteLine("Hello, World!");
 
 using dotnet_test.Models;
-using dotnets.Enums;
+using dotnet_test.Enums;
 string[] names = { "Alice", "Bob", "Charlie" };
 
 foreach (var item in names)
@@ -37,6 +37,14 @@ switch (paintType)
 // 新对象 创建一个实体
 // new PaintProduct() 是一个完整的实体/实例/对象
 
-PaintProduct paintProduct = new PaintProduct();
+// 创建对象
+PaintProduct paintProduct = new PaintProduct(19.99m,"Bob",paintType);
+//给对象内的变量赋值
+//读取对象
+paintProduct.PrintPaintInfo();
 
-System.Console.WriteLine(paintProduct.Name);
+
+
+User user = new User("Bob");
+user.SetUserInfo("Bob",18);
+user.DisplayUserInfo();
