@@ -45,6 +45,13 @@ paintProduct.PrintPaintInfo();
 
 
 
-User user = new User("Bob");
+User user = new AdminUser(2);
 user.SetUserInfo("Bob",18);
 user.DisplayUserInfo();
+
+
+// 父类 user， 子类1号是adminuser，子类2号是guestuser
+//子类可以作为父类的继承者
+User adminUser = new AdminUser(5);
+User guestUser = new GuestUser(6);
+
